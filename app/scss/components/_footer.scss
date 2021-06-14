@@ -1,0 +1,142 @@
+.footer {
+  padding: 64px 0 56px;
+  font-size: 20px;
+  background-color: $main;
+  color: $white;
+  // .footer__top
+
+  &__top {
+    display: flex;
+    margin-bottom: 55px;
+  }
+
+  // .footer__content
+
+  &__list {
+    padding: 15px 0;
+    max-width: 345px;
+    width: 100%;
+    margin-right: 40px;
+  }
+
+  // .footer__item
+
+  &__item {
+    position: relative;
+
+
+    &:not(:last-child) {
+      margin-bottom: 57px;
+      padding-left: 63px;
+    }
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 48px;
+      height: 48px;
+      left: 0;
+      top: -15px;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &--user {
+      &::before {
+        background-image: url(../images/user.png);
+
+      }
+    }
+
+    &--phone {
+      &::before {
+        background-image: url(../images/phone.png);
+      }
+    }
+
+    &--email {
+      &::before {
+        background-image: url(../images/email.png);
+      }
+    }
+
+    &--time {
+      &::before {
+        top: 0;
+        background-image: url(../images/time.png);
+      }
+    }
+  }
+
+
+  // .footer__link
+
+  &__link {
+    transition: color 0.2s;
+
+    &:hover {
+      color: $menu;
+    }
+
+    &:active {
+      color: $black-l;
+    }
+  }
+
+  // .footer__btn
+
+  &__btn {
+    position: relative;
+    padding: 12px 80px 12px 100px;
+    color: $main;
+    background-color: $menu;
+    box-shadow: 0px 4px 0px #AB8A38;
+
+    &::before {
+      position: absolute;
+      content: '';
+      top: 50%;
+      transform: translateY(-50%);
+      left: 55px;
+      width: 32px;
+      height: 32px;
+      background-image: url(../images/ball.png);
+      background-repeat: no-repeat;
+    }
+
+    &:hover {
+      background-color: $green;
+      box-shadow: 0px 4px 0px #3f8653;
+    }
+
+    &:active {
+      background-color: $black-l;
+      box-shadow: 0px 4px 0px #000;
+    }
+
+
+  }
+
+  // .footer__map
+
+  &__map {
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  // .footer__bottom
+
+  &__bottom {
+    text-align: center;
+
+    p {
+      &:not(:last-child) {
+        margin-bottom: 15px;
+      }
+
+      span {
+        color: $menu;
+      }
+    }
+  }
+}

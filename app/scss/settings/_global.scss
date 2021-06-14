@@ -39,7 +39,7 @@ body {
     transition: color 0.2s, border-color 0.2s, border 0.2s;
 
     &:hover {
-     border-bottom-color: $white;
+      border-bottom-color: $white;
     }
 
     &:active {
@@ -64,6 +64,7 @@ body {
     border: none;
     cursor: pointer;
     transition: color 0.2s;
+
     &::before {
       position: absolute;
       content: '';
@@ -75,10 +76,11 @@ body {
       background-repeat: no-repeat;
     }
 
-    &:hover{
+    &:hover {
       color: $green;
     }
-    &:active{
+
+    &:active {
       color: $black;
     }
 
@@ -97,7 +99,8 @@ body {
   &__phone {
     margin-right: 24px;
     transition: color 0.5s, border-bottom-color 0.5s;
-    &:hover{
+
+    &:hover {
       color: $green;
       border-bottom-color: $green;
     }
@@ -123,8 +126,8 @@ body {
 
   &__link-icon {
 
-    &:hover{
-      svg{
+    &:hover {
+      svg {
         fill: $green;
       }
     }
@@ -153,7 +156,7 @@ body {
     }
   }
 }
-// ghbtn]]]
+
 .btn {
   padding: 12px 110px;
   font-size: 24px;
@@ -165,13 +168,14 @@ body {
   border-radius: 50px;
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
-  &:hover{
+
+  &:hover {
     color: $black-l;
     background-color: $main-l;
     box-shadow: 0px 4px 0px #4b1b81;
   }
 
-  &:active{
+  &:active {
     color: $white;
     background-color: $black-l;
     box-shadow: 0px 4px 0px $black;
