@@ -1,0 +1,179 @@
+body {
+  font-family: 'Montserrat Alternates', sans-serif;
+}
+
+.container {
+  width: 1140px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+
+
+
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  font-size: 16px;
+
+  // .menu__list
+
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .menu__item
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 32px;
+    }
+  }
+
+  // .menu__link
+
+  &__link {
+    border: 1px solid transparent;
+    transition: color 0.2s, border-color 0.2s, border 0.2s;
+
+    &:hover {
+     border-bottom-color: $white;
+    }
+
+    &:active {
+      color: $menu;
+      border-bottom-color: $menu;
+    }
+
+    &:focus {
+      outline: transparent;
+      border-bottom: 2px solid $menu;
+
+    }
+  }
+
+
+  &__btn {
+    padding-left: 25px;
+    position: relative;
+    font-size: 16px;
+    color: $menu;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    transition: color 0.2s;
+    &::before {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      left: -4px;
+      top: 0;
+      background-image: url(../images/cursor-small.png);
+      background-repeat: no-repeat;
+    }
+
+    &:hover{
+      color: $green;
+    }
+    &:active{
+      color: $black;
+    }
+
+  }
+
+  // .menu__contacts
+
+  &__contacts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .menu__phone
+
+  &__phone {
+    margin-right: 24px;
+    transition: color 0.5s, border-bottom-color 0.5s;
+    &:hover{
+      color: $green;
+      border-bottom-color: $green;
+    }
+  }
+
+  // .menu__icons
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  // .menu__icon
+
+  &__icon {
+    &:not(:last-child) {
+      margin-right: 16px;
+    }
+  }
+
+  // .menu__link-icon
+
+  &__link-icon {
+
+    &:hover{
+      svg{
+        fill: $green;
+      }
+    }
+  }
+
+  // .menu__svg
+
+  &__svg {
+
+    fill: $white;
+    transition: fill 0.5s;
+
+    &--vk {
+      width: 24px;
+      height: 13px;
+    }
+
+    &--instagram {
+      width: 18px;
+      height: 18px;
+    }
+
+    &--telegram {
+      width: 20px;
+      height: 17px;
+    }
+  }
+}
+
+.btn {
+  padding: 12px 110px;
+  font-size: 24px;
+  font-weight: 400;
+  color: $white;
+  background-color: #2E0062;
+  box-shadow: 0px 4px 0px #230C3D;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
+  &:hover{
+    color: $black-l;
+    background-color: $main-l;
+    box-shadow: 0px 4px 0px #4b1b81;
+  }
+
+  &:active{
+    color: $white;
+    background-color: $black-l;
+    box-shadow: 0px 4px 0px $black;
+  }
+}

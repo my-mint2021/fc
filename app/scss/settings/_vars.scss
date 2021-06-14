@@ -1,0 +1,36 @@
+
+//-----------colors---------------
+$main: #2E0062;
+$main-border: #160030;
+$main-l: #6D3EA2;
+
+$white: #ffffff;
+
+
+$menu: #FFE197;
+
+
+$black: #000000;
+$black-l:#0e0b0b;
+
+$green: #7DCE94;
+
+//-----------fonts---------------
+$dmsans: 'DMSans', serif;
+$rubik  : 'Rubik', serif;
+$poppins: 'Poppins', serif;
+
+//-----------breackpoints---------------
+$xxl: 1800;
+$xl: 1220; 
+$lg: 992;
+$md: 768; 
+$sm: 576;
+
+
+@function max ($numbers...) {
+  @return m#{a}x(#{$numbers});
+}
+@function min ($numbers...) {
+  @return m#{i}n(#{$numbers});
+}
