@@ -3,7 +3,7 @@ body {
 }
 
 .container {
-  width: 1140px;
+  max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
 }
@@ -19,6 +19,7 @@ body {
   // .menu__list
 
   &__list {
+    margin: 0 145px 0 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -92,6 +93,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    @include bp($md){
+      flex-direction: column;
+    }
   }
 
   // .menu__phone
@@ -109,6 +113,7 @@ body {
   // .menu__icons
 
   &__icons {
+    margin: 5px 0 5px 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -169,6 +174,10 @@ body {
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 
+  @include bp($xxl){
+    padding: 12px 30px 12px 60px;
+
+  }
   &:hover {
     color: $black-l;
     background-color: $main-l;

@@ -1,11 +1,12 @@
 .header {
   color: $white;
+  // min-height: 100vh;
 
   // .header__top
 
   &__top {
     display: flex;
-    justify-content: space-between;
+    // justify-content: space-between;
     align-items: center;
     height: 68px;
     padding: 5px 32px;
@@ -16,6 +17,7 @@
   // .header__content
 
   &__content {
+ 
     height: calc(100vh - 68px);
     background-repeat: no-repeat;
     background-size: cover;
@@ -24,13 +26,21 @@
 
   // .header__title
   &__wrap{
- padding: 200px 0;
+       display: flex;
+    flex-direction: column;
+    margin: auto 0;
+//  padding: 200px 0;
   }
 
   &__title {
+    margin: 170px 0 40px 0;
     font-size: 72px;
     font-weight: 400;
-    margin-bottom: 40px;
+    @include bp($xxl){
+      margin: 100px 0 20px 0;
+      font-size: 50px;
+    }
+
   }
 
   // .header__text
@@ -46,7 +56,7 @@
 
   &__btn {
     position: relative;
-  
+    align-self: start;
     &::before{
       position: absolute;
       content: '';
@@ -57,6 +67,9 @@
       height: 32px;
       background-image: url(../images/cursor.png);
       background-repeat: no-repeat;
+      @include bp($xxl){
+        left: 15px;
+      }
     }
   }
 }
