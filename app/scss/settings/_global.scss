@@ -12,22 +12,13 @@ body {
   @include bp($sm) {
     margin-right: 20px;
   }
-
-  // margin-right: 290px;
-  // .logo__img
-
-  &__img {}
 }
-
 
 .menu {
   width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
-
-
-
   // .menu__list
 
   &__list {
@@ -40,15 +31,21 @@ body {
       top: 0;
       left: -10px;
       right: -10px;
-      display: block;
+      z-index: 10;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      padding: 200px 0 50px;
+      padding: 100px 0;
       text-align: center;
       overflow: auto;
-      /* background-color: rgba(0, 0, 0, 0.856); */
-      background-color: #00b2a0e5;
+      background-color: rgba(109, 62, 162, 0.932);
       transform: translateY(-200%);
       transition: transform 0.5s ease-in;
+    }
+
+    &--active {
+      transform: translateY(0);
     }
   }
 
@@ -57,6 +54,15 @@ body {
   &__item {
     &:not(:last-child) {
       margin-right: 32px;
+
+      @include bp($xl) {
+        margin-right: 0;
+      }
+    }
+
+    @include bp($xl) {
+      display: block;
+      width: 100%;
     }
   }
 
@@ -78,7 +84,22 @@ body {
     &:focus {
       outline: transparent;
       border-bottom: 2px solid $menu;
+    }
 
+    @include bp($xl) {
+      display: block;
+      font-size: 36px;
+      padding: 30px 0;
+    }
+
+    @include bp($sm) {
+      font-size: 25px;
+      padding: 25px 0;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      font-size: 20px;
+      padding: 10px 0;
     }
   }
 
@@ -102,6 +123,11 @@ body {
       top: 0;
       background-image: url(../images/cursor-small.png);
       background-repeat: no-repeat;
+
+      @include bp($xl) {
+        width: 0;
+        height: 0;
+      }
     }
 
     &:hover {
@@ -112,6 +138,19 @@ body {
       color: $black;
     }
 
+    @include bp($xl) {
+      width: 100%;
+      padding: 20px 5px;
+      font-size: 28px;
+    }
+
+    @include bp($sm) {
+      font-size: 25px;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 0;
+    }
   }
 
   // .menu__contacts
@@ -124,10 +163,6 @@ body {
     @include bp($xl) {
       flex-direction: column;
       margin: 0 auto;
-    }
-
-    @include bp($sm) {
-      // margin: 0 auto 0 0;
     }
   }
 
@@ -214,7 +249,6 @@ body {
 
   @include bp($xxl) {
     padding: 12px 30px 12px 60px;
-
   }
 
   &:hover {
@@ -240,7 +274,7 @@ body {
     height: 25px;
     right: 15px;
     top: 20px;
-    z-index: 5;
+    z-index: 15;
     background-color: transparent;
     border: none;
     outline: transparent;
@@ -272,6 +306,22 @@ body {
 
     &::after {
       bottom: 0;
+    }
+  }
+
+  &--active {
+    span {
+      display: none;
+    }
+
+    &::before {
+      top: 12px;
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      bottom: 11px;
+      transform: rotate(-45deg);
     }
   }
 }

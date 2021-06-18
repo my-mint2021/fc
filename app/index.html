@@ -6,7 +6,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="preconnect" href="https://fonts.gstatic.com">
 <link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,300;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.min.css">
+  
+<link rel="stylesheet" href="css/choices.min.css">
+<link rel="stylesheet" href="css/style.min.css">
   <title>Сосновка парк</title>
 </head>
 <body>
@@ -35,12 +37,12 @@
           <a class="menu__link" href="#">Контакты</a>
         </li>
         <li class="menu__item">
-          <button class="menu__btn" type="button">Записаться</button>
+          <button class="menu__btn btn-js" type="button">Записаться</button>
         </li>
       </ul>
 
       <div class="menu__contacts">
-        <a class="menu__link menu__phone" href="tel:+78122426291">+7 (812) 242 62 91</a>
+        <a class="menu__phone" href="tel:+78122426291">+7 (812) 242 62 91</a>
         <ul class="menu__icons">
           <li class="menu__icon">
             <a class="menu__link-icon" href="#">
@@ -67,14 +69,12 @@
 
       </div>
 
-  <button class="burger" type="button">
-      <span></span>
-    </button>
-
+      <button class="burger" type="button">
+        <span></span>
+      </button>
     </nav>
-  
   </div>
-  
+
   <div class="header__content" style="background-image: url(images/header-bg.jpg);">
     <div class="container">
       <div class="header__wrap">
@@ -82,18 +82,85 @@
         <div class="header__text">
           <p>Наши ученики становятся звездами футбола среди ровесников</p>
         </div>
-        <button class="btn header__btn" type="button">Записаться</button>
+        
+        <button class="btn header__btn btn-js" type="button">Записаться</button>
       </div>
     </div>
-
   </div>
-
 </header>
 
-  
+  <div class="popup-overlay"></div>
+<!-- <a class="modal-btn" href="#modal-popup">open</a> -->
+<div class="modal-popup">
+  <a class="popup-close" href="#modal-close">&times;</a>
+ <h2 class="modal-popup__title">Запись на разовое занятие</h2>
+ <p class="modal-popup__text">Проходят по вторникам и четвергам с 16:00 до 17:00</p>
+ 
+ <form class="popup-form" action="#">
 
-  
+   <label for="" class="popup-form__label">
+     <input class="popup-form__input" type="text" name="name" placeholder="Ваше имя" required>
+   </label>
+   
+   <label for="" class="popup-form__label">
+    <input class="popup-form__input" type="tel" name="phone" placeholder="Телефон" required>
+  </label>
 
+  <select class="popup-form__select" name="age" id="">
+    <option selected disabled hidden>Возраст ребенка</option>
+    <option value="3">3 года</option>
+    <option value="4">4 года</option>
+    <option value="5">5 лет</option>
+    <option value="5">6 лет</option>
+    <option value="5">7 лет</option>
+  </select>
+
+  <input class="popup-form__date" type="text" onfocus="(this.type='date')" id="date" placeholder="Дата занятия">
+
+  <button class="popup-form__btn" type="submit">Записаться</button>
+ </form>
+</div>
+
+  <footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <ul class="footer__list">
+
+        <li class="footer__item footer__item--user">
+          Есть вопросы? <a class="footer__link" href="$">Пишите!</a>
+        </li>
+
+        <li class="footer__item footer__item--phone">
+          <a class="footer__link" href="telto:+78122426291">+7 (812) 242 62 91</a>
+        </li>
+
+        <li class="footer__item footer__item--email">
+          <a class="footer__link" href="mailto:info@parksosnovka.ru">info@parksosnovka.ru</a>
+        </li>
+
+        <li class="footer__item footer__item--time">
+          <p>Занятия по вт. и чт. с 16:00 до 17:00</p>
+        </li>
+        <li class="footer__item">
+          <button class="btn footer__btn" type="button">Записаться</button>
+        </li>
+      </ul>
+      <div class="footer__map">
+        <iframe
+          src="https://yandex.ru/map-widget/v1/?um=constructor%3A054416a11393167a369553ee65fea03b2366a1d54700ecb9ae530f67965aec93&amp;source=constructor"
+          width="730" height="425" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <p>2020 «Парк Сосновка» — <span>СПб, ул. Жака Дюкло 20Б</span> </p>
+      <p> Сделано KorolevITService</p>
+    </div>
+  </div>
+</footer>
+
+<!-- <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A054416a11393167a369553ee65fea03b2366a1d54700ecb9ae530f67965aec93&amp;width=730&amp;height=425&amp;lang=ru_RU&amp;scroll=true"></script> -->
+
+  <script src="js/choices.min.js"></script>
   <script src="js/main.min.js"></script>
 </body>
 </html>

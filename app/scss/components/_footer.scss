@@ -3,11 +3,33 @@
   font-size: 20px;
   background-color: $main;
   color: $white;
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    padding: 30px 0;
+  }
+
+  @include bp($md) {
+    padding: 30px 0 20px 0;
+  }
+
   // .footer__top
 
   &__top {
     display: flex;
     margin-bottom: 55px;
+
+    @include bp($xl) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      margin-bottom: 30px;
+    }
+
+    @include bp($sm) {
+      margin-bottom: 30px;
+    }
   }
 
   // .footer__content
@@ -17,6 +39,12 @@
     max-width: 345px;
     width: 100%;
     margin-right: 40px;
+
+    @include bp($xl) {
+      order: 2;
+      margin-right: 0;
+      max-width: none;
+    }
   }
 
   // .footer__item
@@ -24,10 +52,17 @@
   &__item {
     position: relative;
 
-
     &:not(:last-child) {
       margin-bottom: 57px;
       padding-left: 63px;
+
+      @media screen and (max-width: 992px) and (orientation: landscape) {
+        margin-bottom: 40px;
+      }
+
+      @include bp($sm) {
+        margin-bottom: 40px;
+      }
     }
 
     &::before {
@@ -44,7 +79,6 @@
     &--user {
       &::before {
         background-image: url(../images/user.png);
-
       }
     }
 
@@ -92,6 +126,11 @@
     background-color: $menu;
     box-shadow: 0px 4px 0px #AB8A38;
 
+    @include bp($md) {
+      display: block;
+      margin: 0 auto;
+    }
+
     &::before {
       position: absolute;
       content: '';
@@ -102,6 +141,14 @@
       height: 32px;
       background-image: url(../images/ball.png);
       background-repeat: no-repeat;
+
+      @media screen and (max-width: 992px) and (orientation: landscape) {
+        left: 25px;
+      }
+
+      @include bp($xl) {
+        left: 25px;
+      }
     }
 
     &:hover {
@@ -114,7 +161,14 @@
       box-shadow: 0px 4px 0px #000;
     }
 
+    @include bp($xl) {
+      padding: 12px 45px 12px 70px;
+    }
 
+    @include bp($sm) {
+      display: block;
+      margin: 0 auto;
+    }
   }
 
   // .footer__map
@@ -122,6 +176,16 @@
   &__map {
     border-radius: 20px;
     overflow: hidden;
+
+    @include bp($xl) {
+      width: 100%;
+      margin-bottom: 20px;
+
+      iframe {
+        width: 100%;
+        height: 300px;
+      }
+    }
   }
 
   // .footer__bottom
@@ -129,7 +193,18 @@
   &__bottom {
     text-align: center;
 
+    @include bp($sm) {
+      font-size: 16px;
+    }
+
     p {
+      &:last-child {
+        @include bp($md) {
+          padding: 20px 0 0 0;
+          border-top: 1px solid #ccc;
+        }
+      }
+
       &:not(:last-child) {
         margin-bottom: 15px;
       }

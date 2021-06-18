@@ -1,9 +1,10 @@
 <div class="popup-overlay"></div>
-<a class="modal-btn" href="#modal-popup">open</a>
+<!-- <a class="modal-btn" href="#modal-popup">open</a> -->
 <div class="modal-popup">
   <a class="popup-close" href="#modal-close">&times;</a>
  <h2 class="modal-popup__title">Запись на разовое занятие</h2>
  <p class="modal-popup__text">Проходят по вторникам и четвергам с 16:00 до 17:00</p>
+ 
  <form class="popup-form" action="#">
 
    <label for="" class="popup-form__label">
@@ -23,7 +24,7 @@
     <option value="5">7 лет</option>
   </select>
 
-  <input id="date" type="text" onfocus="(this.type='date')" id="date" placeholder="Дата занятия">
+  <input class="popup-form__date" type="text" onfocus="(this.type='date')" id="date" placeholder="Дата занятия">
 
   <button class="popup-form__btn" type="submit">Записаться</button>
  </form>
