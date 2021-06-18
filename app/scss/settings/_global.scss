@@ -8,21 +8,48 @@ body {
   margin: 0 auto;
 }
 
+.logo {
+  @include bp($sm) {
+    margin-right: 20px;
+  }
 
+  // margin-right: 290px;
+  // .logo__img
+
+  &__img {}
+}
 
 
 .menu {
+  width: 100%;
   display: flex;
   justify-content: space-between;
   font-size: 16px;
 
+
+
   // .menu__list
 
   &__list {
-    margin: 0 145px 0 320px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include bp($xl) {
+      position: absolute;
+      top: 0;
+      left: -10px;
+      right: -10px;
+      display: block;
+      height: 100vh;
+      padding: 200px 0 50px;
+      text-align: center;
+      overflow: auto;
+      /* background-color: rgba(0, 0, 0, 0.856); */
+      background-color: #00b2a0e5;
+      transform: translateY(-200%);
+      transition: transform 0.5s ease-in;
+    }
   }
 
   // .menu__item
@@ -93,8 +120,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    @include bp($md){
+
+    @include bp($xl) {
       flex-direction: column;
+      margin: 0 auto;
+    }
+
+    @include bp($sm) {
+      // margin: 0 auto 0 0;
     }
   }
 
@@ -103,6 +136,11 @@ body {
   &__phone {
     margin-right: 24px;
     transition: color 0.5s, border-bottom-color 0.5s;
+
+    @include bp($xl) {
+      margin-right: 0;
+      order: 2;
+    }
 
     &:hover {
       color: $green;
@@ -174,10 +212,11 @@ body {
   cursor: pointer;
   transition: color 0.3s, background-color 0.3s, box-shadow 0.3s;
 
-  @include bp($xxl){
+  @include bp($xxl) {
     padding: 12px 30px 12px 60px;
 
   }
+
   &:hover {
     color: $black-l;
     background-color: $main-l;
@@ -188,5 +227,51 @@ body {
     color: $white;
     background-color: $black-l;
     box-shadow: 0px 4px 0px $black;
+  }
+}
+
+.burger {
+  display: none;
+
+  @include bp($xl) {
+    position: absolute;
+    display: block;
+    width: 30px;
+    height: 25px;
+    right: 15px;
+    top: 20px;
+    z-index: 5;
+    background-color: transparent;
+    border: none;
+    outline: transparent;
+
+    span {
+      position: absolute;
+      left: 0;
+      top: 11px;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition: all 0.3s ease 0s;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      width: 100%;
+      height: 2px;
+      background-color: #fff;
+      transition: all 0.4s ease 0s;
+    }
+
+    &::before {
+      top: 0;
+    }
+
+    &::after {
+      bottom: 0;
+    }
   }
 }

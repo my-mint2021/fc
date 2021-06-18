@@ -12,12 +12,15 @@
     padding: 5px 32px;
     background-color: $main;
     border-bottom: 4px solid $main-border;
+    @include bp($sm){
+      padding: 5px 60px 5px 10px;
+    }
   }
 
   // .header__content
 
   &__content {
- 
+
     height: calc(100vh - 68px);
     background-repeat: no-repeat;
     background-size: cover;
@@ -25,18 +28,19 @@
   }
 
   // .header__title
-  &__wrap{
-       display: flex;
+  &__wrap {
+    display: flex;
     flex-direction: column;
     margin: auto 0;
-//  padding: 200px 0;
+    //  padding: 200px 0;
   }
 
   &__title {
     margin: 170px 0 40px 0;
     font-size: 72px;
     font-weight: 400;
-    @include bp($xxl){
+
+    @include bp($xxl) {
       margin: 100px 0 20px 0;
       font-size: 50px;
     }
@@ -57,7 +61,8 @@
   &__btn {
     position: relative;
     align-self: start;
-    &::before{
+
+    &::before {
       position: absolute;
       content: '';
       top: 50%;
@@ -67,22 +72,16 @@
       height: 32px;
       background-image: url(../images/cursor.png);
       background-repeat: no-repeat;
-      @include bp($xxl){
+
+      @include bp($xxl) {
         left: 15px;
       }
     }
   }
 }
 
-.logo {
 
-  // .logo__img
 
-  &__img {
-  }
-}
+.title {}
 
-.title {
-}
-.btn {
-}
+.btn {}
