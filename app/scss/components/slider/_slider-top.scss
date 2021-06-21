@@ -1,0 +1,157 @@
+.slider-top {
+  background-color: $slider;
+  color: $main;
+  // .slider-top__inner
+
+  &__inner {}
+
+  // .slider-top__item
+
+  &__item {}
+
+  &__wrap{
+    display: flex;
+  }
+  // .slider-top__title
+
+  &__title {}
+
+  // .slider-top__name
+
+  &__name {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  // .slider-top__tabs
+
+  &__tabs {}
+}
+
+.title {}
+
+.tabs {
+
+  // .tabs__top
+
+  &__top {
+    display: flex;
+    margin-bottom: 40px;
+  }
+ 
+  // .tabs__item
+
+  &__item {
+    background-color: $menu;
+    color: $main;
+    padding: 12px 24px;
+    border-radius: 8px;
+    padding-left: 60px;
+    // background-color: $menu;
+    // color: $main;
+    // padding: 12px 24px;
+    // border-radius: 8px;
+    // position: relative;
+    // padding-left: 60px;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+
+    // &::before {
+    //   position: absolute;
+    //   content: '';
+    //   width: 24px;
+    //   height: 24px;
+    //   background-repeat: no-repeat;
+    //   left: 24px;
+    //   top: 13px;
+    // }
+
+    // &--one::before {
+    //   background-image: url('../images/tab1.png');
+    // }
+
+    // &--two::before {
+    //   background-image: url('../images/tab2.png');
+    // }
+  }
+
+  // .tabs__link
+
+  &__link {
+    position: relative;
+
+
+
+    &::before {
+      position: absolute;
+      content: '';
+      width: 24px;
+      height: 24px;
+      background-repeat: no-repeat;
+      left: -40px;
+      top: 0px;
+    }
+
+    &--one::before {
+      background-image: url('../images/tab1.png');
+    }
+
+    &--two::before {
+      background-image: url('../images/tab2.png');
+    }
+  }
+
+  // .tabs__content
+
+  &__content {
+    max-width: 630px;
+    width: 100%;
+    margin-right: 10px;
+  }
+
+  &__box{
+    display: none;
+    &--active{
+
+      display: block;
+    }
+    
+  }
+
+  // .tabs__text
+
+  &__text {
+    p {
+      &:not(:last-child) {
+        margin-bottom: 35px;
+      }
+    }
+  }
+
+  // .tabs__list
+
+  &__list {}
+
+  // .tabs__list-item
+
+  &__list-item {}
+
+  // .tabs__image
+
+  &__image {
+    flex: 1 0 550px;
+    height: 550px;
+    align-self: flex-end;
+    border-radius: 50%;
+    text-align: -webkit-center;
+    border-radius: 50%;
+    background-color: red;
+    overflow:hidden;
+  }
+
+  // .tabs__img
+
+  &__img {}
+}
