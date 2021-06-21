@@ -1,0 +1,205 @@
+.age {
+  padding: 120px 0;
+  background-color: $main-l;
+
+  @include bp($xl) {
+    padding: 50px 0;
+  }
+
+  @include bp($md) {
+    padding: 30px 0;
+  }
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    padding: 15px 0;
+  }
+
+  // .age__inner
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // .age__item
+
+  &__item {
+    // flex: 0 0 632px;
+    position: relative;
+    max-width: 630px;
+    width: 100%;
+    height: 295px;
+    margin-bottom: 25px;
+    border-radius: 20px;
+    padding: 48px;
+    background-color: $main;
+    overflow: hidden;
+
+    &:first-child {
+      align-self: flex-start;
+    }
+
+    &:last-child {
+      align-self: flex-end;
+    }
+
+    @include bp($sm) {
+      padding: 15px 15px 25px 15px;
+      height: auto;
+    }
+
+    @media screen and (max-width: 992px) and (orientation: landscape) {
+      padding: 25px;
+    }
+
+    &::before {
+      position: absolute;
+      background-repeat: no-repeat;
+      content: '';
+      bottom: 0;
+      width: 370px;
+    }
+
+    &::after {
+      content: '';
+      width: 120px;
+      height: 120px;
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+
+      @include bp($sm) {
+        opacity: 0.5;
+      }
+    }
+
+    &--bear {
+      position: relative;
+
+      &::before {
+        right: 20px;
+        height: 140px;
+        background-image: url('../images/icon/ellipse-up.svg');
+      }
+
+      &::after {
+        background-image: url('../images/bear.png');
+      }
+    }
+
+    &--joy {
+      position: relative;
+
+      &::before {
+        top: -40px;
+        left: 20px;
+        height: 200px;
+        background-image: url('../images/icon/ellipse-down.svg');
+      }
+
+      &::after {
+        background-image: url('../images/joy.png');
+      }
+    }
+  }
+
+  // .age__subtitle
+
+  &__subtitle {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+
+  // .age__text
+
+  &__text {
+    max-width: 400px;
+    line-height: 1.5;
+    font-size: 19px;
+    @include bp($sm){
+      font-size: 18px;
+    }
+  }
+}
+
+.age-bottom {
+  background-color: $blue;
+  padding: 80px 0;
+
+  @include bp($sm) {
+    padding: 30px 0;
+  }
+
+  @media screen and (max-width: 992px) and (orientation: landscape) {
+    padding: 30px 0;
+  }
+
+  &__wrap {
+    display: flex;
+    align-items: center;
+
+    @include bp($lg) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  // .age__box
+
+  &__box {
+    max-width: 360px;
+    width: 100%;
+
+    @include bp($lg) {
+      max-width: 90%;
+    }
+
+    &:first-child {
+      position: relative;
+      padding-left: 80px;
+      font-size: 25px;
+
+      @include bp($lg) {
+        padding-left: 0;
+      }
+
+      &::before {
+        position: absolute;
+        content: '';
+        left: 0;
+        top: 0;
+        width: 60px;
+        height: 60px;
+        background-repeat: no-repeat;
+        background-image: url('../images/man.png');
+
+        @include bp($lg) {
+          left: 85%;
+        }
+
+        @include bp($sm) {
+          opacity: 0.5;
+          left: 85%;
+        }
+      }
+    }
+
+    &:not(:last-child) {
+      margin-right: 40px;
+
+
+      @include bp($lg) {
+        margin-right: 0;
+        margin-bottom: 40px;
+      }
+
+      @include bp($sm) {
+        margin-bottom: 20px;
+      }
+
+      @media screen and (max-width: 768px) and (orientation: landscape) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+}

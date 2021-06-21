@@ -1,5 +1,9 @@
 body {
   font-family: 'Montserrat Alternates', sans-serif;
+font-size: 20px;
+line-height: 1.5;
+color: $white;
+
 }
 
 .container {
@@ -13,7 +17,24 @@ body {
     margin-right: 20px;
   }
 }
-
+.title{
+  font-size: 64px;
+  font-weight: 400;
+  margin-bottom: 120px;
+  text-align: center;
+  &--blue{
+  color: $main;
+  }
+  @include bp($lg){
+    margin-bottom: 20px;
+    font-size: 50px;
+  }
+  @include bp($sm){
+    font-size: 30px;
+  }
+  @media screen and (max-width: 1024px) and (orientation: landscape) {margin-bottom: 20px;}
+  @media screen and (max-width: 992px) and (orientation: landscape) {font-size: 30px;}
+}
 .menu {
   width: 100%;
   display: flex;

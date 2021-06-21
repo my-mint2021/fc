@@ -93,34 +93,114 @@
 <!-- <a class="modal-btn" href="#modal-popup">open</a> -->
 <div class="modal-popup">
   <a class="popup-close" href="#modal-close">&times;</a>
- <h2 class="modal-popup__title">Запись на разовое занятие</h2>
- <p class="modal-popup__text">Проходят по вторникам и четвергам с 16:00 до 17:00</p>
- 
- <form class="popup-form" action="#">
+  <h2 class="modal-popup__title">Запись на разовое занятие</h2>
+  <p class="modal-popup__text">Проходят по вторникам и четвергам с 16:00 до 17:00</p>
 
-   <label for="" class="popup-form__label">
-     <input class="popup-form__input" type="text" name="name" placeholder="Ваше имя" required>
-   </label>
-   
-   <label for="" class="popup-form__label">
-    <input class="popup-form__input" type="tel" name="phone" placeholder="Телефон" required>
-  </label>
+  <form class="popup-form" action="#" onsubmit="return false">
+    <!-- отправка формы не происходит-чтобы показать последний попап, надо сделать чтобы по закрытию маленького попапа форма отправлялась или чтобы страница перезагружалась после закрытия последнего попап -->
+    <label for="" class="popup-form__label">
+      <input class="popup-form__input" type="text" name="name" placeholder="Ваше имя" required>
+    </label>
 
-  <select class="popup-form__select" name="age" id="">
-    <option selected disabled hidden>Возраст ребенка</option>
-    <option value="3">3 года</option>
-    <option value="4">4 года</option>
-    <option value="5">5 лет</option>
-    <option value="5">6 лет</option>
-    <option value="5">7 лет</option>
-  </select>
+    <label for="" class="popup-form__label">
+      <input class="popup-form__input" type="tel" name="phone" placeholder="Телефон" required>
+    </label>
 
-  <input class="popup-form__date" type="text" onfocus="(this.type='date')" id="date" placeholder="Дата занятия">
+    <select required class="popup-form__select" name="age" id="select-form">
+      <option selected disabled value="">Возраст ребенка</option>
+      <option value="3">3 года</option>
+      <option value="4">4 года</option>
+      <option value="5">5 лет</option>
+      <option value="5">6 лет</option>
+      <option value="5">7 лет</option>
+    </select>
 
-  <button class="popup-form__btn" type="submit">Записаться</button>
- </form>
+    <input class="popup-form__date" type="text" onfocus="(this.type='date')" id="date" placeholder="Дата занятия"
+      required>
+
+    <button class="popup-form__btn" type="submit">Записаться</button>
+
+  </form>
+</div>
+  <div class="popup-overlay"></div>
+<div class="modal-small">
+  <a class="popup-close" href="#modal-close">&times;</a>
+ <h2 class="modal-small__title">Лучшее решение за сегодня</h2>
+ <img src="images/like.png" alt="like logo">
+ <p class="modal-small__text">Заявка уже улетела нам на почту, скоро позвоним</p>
 </div>
 
+
+
+  <section class="plus">
+  <div class="container">
+    <h2 class="title title--blue">
+      Преимущества
+    </h2>
+
+    <ul class="plus__inner">
+      <li class="plus__item plus__item--1">
+        <p class="plus__text">
+          Первое занятие бесплатно
+        </p>
+      </li>
+      <li class="plus__item plus__item--2">
+        <p class="plus__text">
+          Индивидуальный подход к каждому ученику и уникальная методика
+        </p>
+      </li>
+      <li class="plus__item plus__item--3">
+        <p class="plus__text">
+          Футбольный лагерь — способ занять ребенка на каникулах
+        </p>
+      </li>
+      <li class="plus__item plus__item--4">
+        <p class="plus__text">
+          Тренеры — действующие футболисты и победители соревнований
+        </p>
+      </li>
+      <li class="plus__item plus__item--5">
+        <p class="plus__text">
+          Мини-группы до 10 человек
+        </p>
+      </li>
+      <li class="plus__item plus__item--6">
+        <p class="plus__text">
+          В PINEcafe можно перекусить после тренировки полезной едой
+        </p>
+      </li>
+    </ul>
+  </div>
+</section>
+  <section class="age">
+  <div class="container">
+    <h2 class="title">Две возрастные группы</h2>
+    <div class="age__inner">
+      <div class="age__item age__item--bear">
+        <h3 class="age__subtitle">3—5 лет</h3>
+        <p class="age__text">Специалисты рекомендуют начинать заниматься футболом с 3 лет. Не все школы идут на это. У нас дети занимаются по уникальной методике, разработанной для самых маленьких.</p>
+      </div>
+      <div class="age__item age__item--joy">
+        <h3 class="age__subtitle">6—10 лет</h3>
+        <p class="age__text">В группу постарше переходят как опытные ребята из младшей группы, так и те, кто только начинают занятия футболом.</p>
+      </div>
+    </div>
+  </div>
+  <div class="age-bottom">
+    <div class="container">
+       <ul class="age-bottom__wrap">
+      <li class="age-bottom__box">
+        Внимание к детям превыше всего
+      </li>
+      <li class="age-bottom__box">
+        Все наши занятия проходят в ФОЦ «Сосновка Парк», на базе которой создана школа.      </li>
+      <li class="age-bottom__box">
+        Мы не сетевой проект и направляем внимание  только на качественную подготовку воспитанников.      </li>
+    </ul>
+    </div>
+   
+  </div>
+</section>
   <footer class="footer">
   <div class="container">
     <div class="footer__top">

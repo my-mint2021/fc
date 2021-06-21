@@ -1,0 +1,77 @@
+.plus {
+background-color: $menu;
+color: $main;
+padding: 120px 0 160px 0;
+@include bp($lg){
+ padding: 30px 0;
+}
+@media screen and (max-width: 992px) and (orientation: landscape) {padding: 15px 0;}
+  // .plus__inner
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+  }
+
+  // .plus__item
+
+  &__item {
+    font-size: 18px;
+    flex: 0 0 343px;
+    padding: 104px 5px 5px 5px;
+    // border: 1px solid red;
+    margin-bottom: 45px;
+    text-align: center;
+    background-repeat: no-repeat;
+    background-position: top;
+    &:not(:last-child){
+      margin-right: 40px;
+    }
+    &:nth-child(3), &:nth-child(6){
+      margin-right: 0;
+    }
+    @include bp($xl){
+      &:nth-child(odd){
+        margin-right: 40px;
+      }
+      &:nth-child(even){
+        margin-right: 0;
+      }
+    }
+    @include bp($md){
+      &:nth-child(odd){
+        margin-right: 0;
+      }
+    }
+    @include bp($sm){
+      flex: 0 0 290px;
+      margin-bottom: 25px;
+    }
+
+    &--1{
+      background-image: url('../images/1.png');
+    }
+    &--2{
+      background-image: url('../images/2.png');
+    }
+    &--3{
+      background-image: url('../images/3.png');
+    }
+    &--4{
+      background-image: url('../images/4.png');
+    }
+    &--5{
+      background-image: url('../images/5.png');
+    }
+    &--6{
+      background-image: url('../images/6.png');
+    }
+  }
+
+  // .plus__text
+
+  &__text {
+  }
+}
