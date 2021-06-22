@@ -10,6 +10,11 @@ color: $white;
   max-width: 1140px;
   padding: 0 15px;
   margin: 0 auto;
+  &--slider{
+    max-width: 1900px;
+    padding: 0 15px;
+    margin: 0 auto;
+  }
 }
 
 .logo {
